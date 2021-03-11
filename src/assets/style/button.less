@@ -1,0 +1,91 @@
+@hue: 190;
+@easeInDuration: .25s;
+@easeInExponential: cubic-bezier(.95, .05, .795, .035);
+@easeOutDuration: .65s;
+@easyOutDelay: @easeInDuration;
+@easeOutExponential: cubic-bezier(.19, 1, .22, 1);
+
+.btnNew {
+    position: relative;
+    padding: 1rem 3rem;
+    border: 1px solid hsl(@hue, 100%, 41%);
+    overflow: hidden;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: white;
+    background: hsl(@hue, 100%, 41%);
+    transition: @easeInDuration;
+    cursor: pointer;
+    user-select: none;
+
+    &:hover {
+        background: hsl(@hue, 100%, 31%);
+    }
+
+    &-primary {
+        @hue: 171;
+    }
+
+    &-ghost {
+        border-color: hsl(@hue, 100%, 41%);
+        color: hsl(@hue, 100%, 41%);
+        background: transparent;
+
+        &:hover {
+            color: white;
+        }
+    }
+
+    &-border-stroke {
+        border-color: hsl(@hue, 41%, .35);
+
+        .btn-borders {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+
+            .border-top {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 1px;
+                background: hsl(@hue, 100%, 41%);
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            .border-right {
+                position: absolute;
+                top: 0;
+                right: 0;
+                width: 1px;
+                height: 100%;
+                background: hsl(@hue, 100%, 41%);
+                transform: scaleY(0);
+                transform-origin: bottom;
+            }
+
+            .border-bottom {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 1px;
+                background: hsl(@hue, 100%, 41%);
+                transform: scaleX(0);
+                transform-origin: left;
+            }
+
+            .border-left {
+                position: absolute;
+                left: 0;
+                width: 1px;
+                height: 100%;
+                background: hsl(@hue, 100%, 41%);
+                transform: scaleY(0);
+                transform-origin: left;
+            }
+        }
+    }
+}

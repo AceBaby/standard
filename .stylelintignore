@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mobi)
+/src/assets/images/
+build/*.js
+config/*.js
+/src/components/map
+/src/components/layer/LatLngGraticule.js
+/static/lib/leaflet/leaflet.Editable.js
+/test/
+/lab/

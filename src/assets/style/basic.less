@@ -1,0 +1,28 @@
+@import '@/assets/style/button.less';
+@imagePath: '~@/assets/images';
+@font-color:rgba(255, 255, 255, .7);
+.fontStyle(@color, @size) {
+    font-size: @size;
+    color: @color;
+}
+.backgroundImage(@name) {
+    background: url("@{imagePath}@{name}.png") no-repeat;
+    background-size: 100% 100%;
+}
+.backgroundImageByJpg(@name) {
+    background: url("@{imagePath}@{name}.jpg") no-repeat;
+}
+.backgroundGif(@name) {
+    background: url("@{imagePath}@{name}.gif") no-repeat;
+}
+.container(@height: 0, @width: 0) when(@height = 0) {
+    width: @width;
+}
+.container(@height: 0, @width: 0) when(@width = 0) {
+    height: @height;
+}
+.container(@height: 0, @width: 0) when not(@height=0) and not(@width = 0) {
+    width: @width;
+    height: @height;
+    border-radius: 5px;
+}
