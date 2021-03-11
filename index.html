@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>项目</title>
+    <script type="text/javascript" src="./static/config.js"></script>
+</head>
+<body style="margin: 0px">
+<div id="app"></div>
+<% for (var css in htmlWebpackPlugin.files.css) { %>
+<link href="<%=htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+<% } %>
+</body>
+</html>

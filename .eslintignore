@@ -1,0 +1,8 @@
+build/*.js
+config/*.js
+/src/assets
+/src/components/map
+/src/components/layer/LatLngGraticule.js
+/static/lib/leaflet/leaflet.Editable.js
+/test/
+/lab/
